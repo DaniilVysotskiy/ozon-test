@@ -1,55 +1,37 @@
 @import "vars"
 
-/*==========  Desktop First  ==========*/
+@media (max-width: 1000px)
+	.card
+		display: flex;
+		position: relative;
+		min-width: 700px;
+		height: auto;
 
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	/**/
+	.card__pic
+		order: 1;
+		min-width: 50%;
 
+	.card__header
+		order: 2;
+		position: absolute;
+		padding: 20px 30px;
+		top: 0;
+		right: 0;
+		width: 50%;
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/**/
+	.card__info
+		order: 3;
+		margin-top: 80px;
+		padding: 30px;
+		min-width: 50%;
 
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
-	/**/
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
-
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
-
-
-/*==========  Mobile First  ==========*/
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-	/**/
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-	/**/
-
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
-	/**/
-
+	.card__header::after
+		content: '';
+		position: absolute;
+		width: calc(100% - 60px);
+		bottom: 0;
+		left: 30px;
+		border-bottom: 1px solid #ddd;
+	
+	.card__pic img
+		height: 100%;
